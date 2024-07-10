@@ -41,10 +41,12 @@ Backend app providing full e-commerce functionality including:
 
 - copy repo files to local directory
 - npm install
-- configure .env file with PORT, MONGO_URI
+- configure .env file with PORT, MONGO_URI,JWT_SECRET & JWT_LIFETIME
 
 * PORT is the port the backend API server will run on
 * MONGO_URI is the mongoDB database connection string (ensure to include the database name, username and password)
+* JWT_SECRET is a 256 bit encryption string
+* JWT_LIFETIME is the expiry time of a JWT (e.g. 30d)
 
 - npm run dev
 - connect with localhost:5000
