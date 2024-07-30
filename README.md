@@ -62,6 +62,4 @@ docgen provides api documentation of the routes using postman export file
 - generate an index.html with the following command
 - ensure windows_amd64.exe is located in a directory that has been added to your path environment variable:
 
-`js
-windows_amd64 build -i {name of postman json export file} -o ~/{output directory}/index.html
-`
+`windows_amd64 build -i {name of postman json export file} -o ~/{output directory}/index.html`
