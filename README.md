@@ -10,6 +10,7 @@ Backend app providing full e-commerce functionality including:
 - update user profile
 - create/delete/update/get order/s
 - create/delete/update/get product/s
+- create/update/get order/s
 
 ## Tech stack
 
