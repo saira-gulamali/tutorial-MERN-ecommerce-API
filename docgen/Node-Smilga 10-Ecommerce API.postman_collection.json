@@ -1,0 +1,481 @@
+{
+  "info": {
+    "_postman_id": "a76768bf-b076-4247-8e3f-75a6ecafc319",
+    "name": "Node-Smilga 10-Ecommerce API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "22763142"
+  },
+  "item": [
+    {
+      "name": "products",
+      "item": [
+        {
+          "name": "get all products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/products",
+              "host": ["http://localhost:5000/api/v1/products"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get Single product",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/products/1234",
+              "host": ["http://localhost:5000/api/v1/products"],
+              "path": ["1234"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update product",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{   \"name\": \"first product\",\r\n        \"price\": 10,\r\n        \"description\": \"testing update product\",\r\n        \"image\": \"/uploads/example.jpg\",\r\n        \"category\": \"office\",\r\n        \"company\": \"liddy\",\r\n        \"colours\": [\"red\", \"blue\"],\r\n        \"featured\": true,\r\n        \"freeShipping\": true,\r\n        \"inventory\": 20,\r\n        \"averageRating\": 4\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/products/669147b21fc87d14c2d11b65",
+              "host": ["http://localhost:5000/api/v1/products"],
+              "path": ["669147b21fc87d14c2d11b65"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete product",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/products/1234",
+              "host": ["http://localhost:5000/api/v1/products"],
+              "path": ["1234"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create product",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": " {\r\n  \"name\": \"aaa\",\r\n  \"price\": 100,\r\n  \"description\": \"aaaa\",\r\n  \"category\": \"bedroom\",\r\n  \"company\": \"ikea\",\r\n  \"colours\": [\"sdfsdf\", \"asdsad\"],\r\n  \"inventory\": 100\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/products",
+              "host": ["http://localhost:5000/api/v1/products"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create product -empty fields",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": " {\r\n  \"name\": \"aaa\",\r\n  \"price\": 100,\r\n  \"description\": \"aaaa\",\r\n  \"category\": \"bedroom\",\r\n  \"company\": \"ikea\",\r\n  \"colours\": [\"sdfsdf\", \"asdsad\"],\r\n  \"inventory\": 100\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/products",
+              "host": ["http://localhost:5000/api/v1/products"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "upload image",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/products/uploadimage",
+              "host": ["http://localhost:5000/api/v1/products"],
+              "path": ["uploadimage"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "get All Users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/users",
+              "host": ["http://localhost:5000/users"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get Single User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/users/12345",
+              "host": ["http://localhost:5000/users"],
+              "path": ["12345"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update User",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/users/updateUser",
+              "host": ["http://localhost:5000/users"],
+              "path": ["updateUser"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update user password",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/users/reset",
+              "host": ["http://localhost:5000/users"],
+              "path": ["reset"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "show Current User",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/users/showMe",
+              "host": ["http://localhost:5000/users"],
+              "path": ["showMe"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "reviews",
+      "item": [
+        {
+          "name": "create review",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/reviews",
+              "host": ["http://localhost:5000/api/v1/reviews"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all reviews",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/reviews",
+              "host": ["http://localhost:5000/api/v1/reviews"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get single review",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/reviews/12345",
+              "host": ["http://localhost:5000/api/v1/reviews"],
+              "path": ["12345"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update review",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/reviews/12345",
+              "host": ["http://localhost:5000/api/v1/reviews"],
+              "path": ["12345"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete review",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/reviews/12345",
+              "host": ["http://localhost:5000/api/v1/reviews"],
+              "path": ["12345"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get Single Product Reviews",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "orders",
+      "item": [
+        {
+          "name": "get all orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/orders",
+              "host": ["http://localhost:5000/api/v1/orders"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "show all my orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/orders/showAllMyOrders",
+              "host": ["http://localhost:5000/api/v1/orders"],
+              "path": ["showAllMyOrders"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get single order",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/orders/66a27ffb23687e419a91fbc7",
+              "host": ["http://localhost:5000/api/v1/orders"],
+              "path": ["66a27ffb23687e419a91fbc7"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update order",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"paymentIntentId\": \"a annoying good payment id\"\r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/orders/66a27ffb23687e419a91fbc7",
+              "host": ["http://localhost:5000/api/v1/orders"],
+              "path": ["66a27ffb23687e419a91fbc7"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create order",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"tax\": 15,\r\n    \"shippingfee\": 13,\r\n   \r\n    \"cartItems\": [\r\n      {\r\n        \"name\": \"new third product\",\r\n        \"image\": \"/uploads/example123.jpg\",\r\n        \"price\": 25,\r\n        \"amount\": 3,\r\n        \"product\": \"66914d76c3b3acfbfe9e1f80\"\r\n      },{\r\n        \"name\": \"new third product\",\r\n        \"image\": \"/uploads/example123.jpg\",\r\n        \"price\": 25,\r\n        \"amount\": 2,\r\n        \"product\": \"669fe60e3ef5408688646aeb\"\r\n      }\r\n    ]\r\n\r\n   \r\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/orders",
+              "host": ["http://localhost:5000/api/v1/orders"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/v1/auth/login",
+          "host": ["http://localhost:5000/api/v1/auth"],
+          "path": ["login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "logout",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/v1/auth/logout",
+          "host": ["http://localhost:5000/api/v1/auth"],
+          "path": ["logout"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/v1/auth/register",
+          "host": ["http://localhost:5000/api/v1/auth"],
+          "path": ["register"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "home page",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login admin",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\":\"saira@gmail.com\",\r\n\"password\": \"Secret123$\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/auth/login",
+          "host": ["http://localhost:5000/api/v1/auth"],
+          "path": ["login"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "URL_AUTH",
+      "value": "http://localhost:5000/api/v1/auth",
+      "type": "string"
+    },
+    {
+      "key": "URL_USER",
+      "value": "http://localhost:5000/api/v1/users",
+      "type": "string"
+    },
+    {
+      "key": "URL_PRODUCT",
+      "value": "http://localhost:5000/api/v1/products",
+      "type": "string"
+    },
+    {
+      "key": "URL_REVIEW",
+      "value": "http://localhost:5000/api/v1/reviews",
+      "type": "string"
+    },
+    {
+      "key": "URL_ORDER",
+      "value": "http://localhost:5000/api/v1/orders",
+      "type": "string"
+    }
+  ]
+}

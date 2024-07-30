@@ -1,0 +1,1 @@
+windows_amd64 build -i 'Node-Smilga 10-Ecommerce API.postman_collection.json' -o ~/AppData/Local/docgen/index.html
