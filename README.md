@@ -41,14 +41,26 @@ Backend app providing full e-commerce functionality including:
 
 - copy repo files to local directory
 - npm install
-- configure .env file with PORT, MONGO_URI,JWT_SECRET & JWT_LIFETIME
+- configure .env file with PORT, MONGO_URI,JWT_SECRET, JWT_LIFETIME & CORS
 
 * PORT is the port the backend API server will run on
 * MONGO_URI is the mongoDB database connection string (ensure to include the database name, username and password)
 * JWT_SECRET is a 256 bit encryption string
 * JWT_LIFETIME is the expiry time of a JWT (e.g. 30d)
+* CORS is the url of the frontend server
 
 - npm run dev
 - connect with localhost:5000
 
-## Configuration
+## Docgen Information
+
+docgen provides api documentation of the routes using postman export file
+
+### windows installation
+
+- generate an index.html with the following command
+- ensure windows_amd64.exe is located in a directory that has been added to your path environment variable:
+
+`js
+windows_amd64 build -i {name of postman json export file} -o ~/{output directory}/index.html
+`
